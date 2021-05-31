@@ -91,12 +91,12 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.10.9 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: pedrolacerda-local-library
-          heroku_email: pedrohrl1@gmail.com
+          heroku_app_name: app-impacta-williampellegrini
+          heroku_email: wpellegrini@plenitytech.com.br
           justlogin: true
       
       - name: Set Heroku remote
-        run: heroku git:remote -a pedrolacerda-local-library
+        run: heroku git:remote -a app-impacta-williampellegrini
       
       - name: Set env variables
         run: |
