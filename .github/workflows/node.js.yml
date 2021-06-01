@@ -43,7 +43,7 @@ jobs:
   deploy-homologacao:
     runs-on: ubuntu-latest
     env:
-      DB_URI: ${{ secrets.DB_URI }}
+      DB_URI: ${{ secrets.MONGODB_URI }}
       
     needs: [sonarcloud]
     steps:
@@ -75,7 +75,7 @@ jobs:
   deploy-producao:
     runs-on: ubuntu-latest
     env:
-      DB_URI: $${{ secrets.DB_URI }}
+      DB_URI: $${{ secrets.MONGODB_URI }}
       NODE_ENV: production
       
     needs: [deploy-homologacao]
